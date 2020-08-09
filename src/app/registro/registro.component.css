@@ -1,0 +1,17 @@
+.form-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.form-item {
+    width: 80%;
+}
+
+.form-btn-ok{
+    float: right;
+    padding-right: 125px;
+}
+

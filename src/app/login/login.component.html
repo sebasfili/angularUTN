@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <fieldset>
+        <legend>Ingreso:</legend>
+        <label for="user">Usuario: </label> <br>
+        <input type="email" formControlName="user" placeholder="usuario">
+        <div [ngStyle]="{'color':'red'}"
+            *ngIf="loginForm.get('user').hasError('required') && loginForm.get('user').touched">
+            El nombre de usuario es obligatorio
+        </div>
+        <div [ngStyle]="{'color':'red'}"
+            *ngIf="loginForm.get('user').hasError('email') && loginForm.get('user').touched">
+            El usuario debe tener el formato usuario@dominio.com
+        </div>
+        <br>
+        <label for="password">Password: </label><br>
+        <input type="password" formControlName="password" placeholder="contraseña">
+        <div [ngStyle]="{'color':'red'}"
+            *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+            El password es obligatorio
+        </div>
+        <div [ngStyle]="{'color':'red'}"
+            *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched">
+            El password debe tener como mínimo 8 carácteres
+        </div>
+        <br><br>
+        <button mat-raised-button color="primary" type="submit">Ingresar</button>
+        <div [ngStyle]="{'color':'green'}"
+            *ngIf="loginForm.valid && submitted">
+            Ingreso exitoso!!!
+        </div>
+    </fieldset>
+</form>
+
