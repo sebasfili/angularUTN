@@ -1,6 +1,7 @@
 <form [formGroup]="registerForm" (ngSubmit)="submit()">
-
-    <div class="form-container">
+    
+    <h2 class="center">Registro de Nuevo Usuario</h2>
+    <div class="form-container">        
         <mat-form-field appearance="fill" class="form-item">
             <mat-label for="name">Nombre: </mat-label> <br>
             <input matInput type="text" formControlName="name" placeholder="Nombre" required>
@@ -40,7 +41,7 @@
 
         <mat-form-field appearance="fill" class="form-item">
             <mat-label>Password:</mat-label>
-            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" required>
             <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -57,7 +58,7 @@
         </mat-form-field>
         <mat-form-field appearance="fill" class="form-item">
             <mat-label>Password:</mat-label>
-            <input matInput formControlName="rePassword" [type]="hide ? 'password' : 'text'">
+            <input matInput formControlName="rePassword" [type]="hide ? 'password' : 'text'" required>
             <button mat-icon-button matSuffix type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>

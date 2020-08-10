@@ -3,26 +3,22 @@
         <mat-form-field appearance="fill">
             <mat-label for="user">Usuario: </mat-label> <br>
             <input matInput type="email" formControlName="user" placeholder="usuario" required>
-            <div [ngStyle]="{'color':'red'}"
-                *ngIf="loginForm.get('user').hasError('required') && loginForm.get('user').touched">
+            <mat-error *ngIf="loginForm.get('user').hasError('required') && loginForm.get('user').touched">
                 El nombre de usuario es obligatorio
-            </div>
-            <div [ngStyle]="{'color':'red'}"
-                *ngIf="loginForm.get('user').hasError('email') && loginForm.get('user').touched">
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('user').hasError('email') && loginForm.get('user').touched">
                 El usuario debe tener el formato usuario@dominio.com
-            </div>
+            </mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label for="password">Password: </mat-label><br>
             <input matInput type="password" formControlName="password" placeholder="contraseña">
-            <div [ngStyle]="{'color':'red'}"
-                *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+            <mat-error *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
                 El password es obligatorio
-            </div>
-            <div [ngStyle]="{'color':'red'}"
-                *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched">
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched">
                 El password debe tener como mínimo 8 carácteres
-            </div>
+            </mat-error>
         </mat-form-field>
         <div class="form-btn-ok">
             <button mat-raised-button color="primary" type="submit">Ingresar</button>

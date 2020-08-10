@@ -1,11 +1,14 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+  <button mat-icon-button aria-label="Example icon-button with menu icon" [routerLink]="['/','home']">
+    <mat-icon>home</mat-icon>
   </button>
-  <span>e-comerce</span>  
+  <span>e-comerce</span>
+  <div class="button-row">
+    <a mat-button [routerLink]="['/','catalogo']">Catalogo</a>
+    <a mat-button [routerLink]="['/','login']">Login</a>
+    <a mat-button [routerLink]="['/','registro']">Registro</a>
+    <a mat-button [routerLink]="['/','detalle']">Detalle (provisorio)</a>
+  </div>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
-
-
-
