@@ -9,7 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 
 import { LoginComponent } from './login/login.component';
@@ -19,6 +20,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatInputModule,
     MatFormFieldModule,
     MatGridListModule,
+    HttpClientModule,
+    MatCardModule,
   ],
 
   exports: [MatIconModule,],

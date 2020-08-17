@@ -1,0 +1,12 @@
+.example-card {
+    max-width: 300px;    
+}
+
+.example-header-image {
+    background-image: url('/assets/laptop.png');
+    background-size: cover;
+}
+
+.image-height{
+  max-height: 280px;
+}
