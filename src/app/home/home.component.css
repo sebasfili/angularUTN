@@ -1,5 +1,5 @@
 .example-card {
-    max-width: 300px;    
+    max-width: 350px;    
 }
 
 .example-header-image {
@@ -8,5 +8,31 @@
 }
 
 .image-height{
-  max-height: 280px;
+  height: 200px;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}  
+
+.flex-item {  
+  padding: 35px;
+  max-width: 350px;  
+  height: 400px;
+  margin: 11px;  
 }

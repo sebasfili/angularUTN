@@ -11,7 +11,7 @@ export class ProductosService {
     private httpClient: HttpClient,
   ) { }
 
-  getProductos(): any {
-   return this.httpClient.get('https://jsonfy.com/items');
+  getPosts(): any {
+   return this.httpClient.get('https://jsonplaceholder.typicode.com/posts');
   }
 }

@@ -1,22 +1,24 @@
-<div layout="row" layout-align="space-around center">
-    <mat-card class="example-card" *ngFor="let prod of productos">
-        <mat-card-header>
+<div class="flex-container wrap">
+    <div *ngFor="let prod of productos" class="flex-item">
+        <mat-card class="example-card">
+            <mat-card-header>
 
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title-group>
-                <mat-card-title>{{prod.name}}</mat-card-title>
-                <mat-card-subtitle>{{prod.date_upd}}</mat-card-subtitle>
-            </mat-card-title-group>
-        </mat-card-header>
-        <img mat-card-image src={{prod.photo_url}} alt="Photo of a product" class="image-height">
-        <mat-card-content>
-            <p>
-                {{prod.description}}
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>DETALLE</button>
-        </mat-card-actions>
-    </mat-card>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title-group>
+                    <mat-card-title>{{prod.title}}</mat-card-title>
+                    <mat-card-subtitle>{{prod.date_upd}}</mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+            <img mat-card-image src='/assets/cell-post.png' alt="Photo of a product" class="image-height">
+            <mat-card-content>
+                <p>
+                    {{prod.body}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>DETALLE</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>
