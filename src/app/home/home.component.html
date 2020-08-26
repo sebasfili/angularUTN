@@ -5,15 +5,13 @@
 
                 <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title-group>
-                    <mat-card-title>{{prod.title}}</mat-card-title>
-                    <mat-card-subtitle>{{prod.date_upd}}</mat-card-subtitle>
+                    <mat-card-title>{{prod.nombre}}</mat-card-title>
+                    <mat-card-subtitle>{{prod.Tipo}}. ID: {{prod.id}}</mat-card-subtitle>
                 </mat-card-title-group>
             </mat-card-header>
-            <img mat-card-image src='/assets/cell-post.png' alt="Photo of a product" class="image-height">
-            <mat-card-content>
-                <p>
-                    {{prod.body}}
-                </p>
+            <img mat-card-image src={{prod.imagen}} alt="Photo of a product" class="image-height">
+            <mat-card-content>               
+                <p>Precio: {{prod.precio}}</p>
             </mat-card-content>
             <mat-card-actions>
                 <button mat-button>LIKE</button>

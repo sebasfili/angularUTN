@@ -12,6 +12,6 @@ export class ProductosService {
   ) { }
 
   getPosts(): any {
-   return this.httpClient.get('https://jsonplaceholder.typicode.com/posts');
+   return this.httpClient.get('https://my-json-server.typicode.com/sebasfili/reactApi/db');
   }
 }
