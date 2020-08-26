@@ -10,7 +10,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'detalle', component: DetalleComponent },
+  { path: 'detalle/:id', component: DetalleComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'catalogo', component: CatalogoComponent },

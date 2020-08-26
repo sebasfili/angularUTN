@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   productos: [];
 
   constructor(
-    public productosService: ProductosService
+    private productosService: ProductosService
   ) { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ConstantPool } from '@angular/compiler';
 
 @Injectable({
@@ -12,6 +12,10 @@ export class ProductosService {
   ) { }
 
   getPosts(): any {
-   return this.httpClient.get('https://my-json-server.typicode.com/sebasfili/reactApi/db');
+    return this.httpClient.get('https://my-json-server.typicode.com/sebasfili/reactApi/db');
+  }
+
+  getOnePost(id: Int16Array): any {
+    return this.httpClient.get(`https://my-json-server.typicode.com/sebasfili/reactApi/listado/${id}`);
   }
 }
