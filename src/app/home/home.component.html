@@ -10,12 +10,11 @@
                 </mat-card-title-group>
             </mat-card-header>
             <img mat-card-image src={{prod.imagen}} alt="Photo of a product" class="image-height">
-            <mat-card-content>               
+            <mat-card-content>
                 <p>Precio: {{prod.precio}}</p>
             </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>DETALLE</button>
+            <mat-card-actions align='end'>
+                <button mat-raised-button color="primary" [routerLink]="['/','detalle']">DETALLE</button>
             </mat-card-actions>
         </mat-card>
     </div>
